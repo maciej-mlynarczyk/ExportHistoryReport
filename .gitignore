@@ -8,3 +8,12 @@
 /ExportHistoryReport/ExportHistoryReport.Database/bin/Debug
 /ExportHistoryReport/ExportHistoryReport.Database/obj/Debug
 *.user
+/ExportHistoryReport/ExportHistoryReport.BusinessLayer/bin/Debug
+/ExportHistoryReport/ExportHistoryReport.BusinessLayer/obj/Debug
+*.jfm
+*.dbmdl
+/ExportHistoryReport/ExportHistoryReport.DataLayer/bin/Debug
+/ExportHistoryReport/ExportHistoryReport.DataLayer/obj/Debug
+/ExportHistoryReport/ExportHistoryReport.Forms/bin/Debug
+/ExportHistoryReport/ExportHistoryReport.Forms/obj/Debug
+/ExportHistoryReport/packages
