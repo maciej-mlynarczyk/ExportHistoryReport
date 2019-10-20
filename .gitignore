@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ExportHistoryReport/.vs
+*.suo
+/.vs
+/ExportHistoryReport/ExportHistoryReport.Database/bin/Debug
+/ExportHistoryReport/ExportHistoryReport.Database/obj/Debug
+*.user

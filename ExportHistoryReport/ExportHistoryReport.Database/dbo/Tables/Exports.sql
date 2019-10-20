@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Exports]
+(
+	[ID] INT IDENTITY (1, 1) NOT NULL
+	, [Name] NVARCHAR(256) NOT NULL
+	, [ExecutionDateTime] DATETIME NOT NULL
+	, [UserName] NVARCHAR(256) NOT NULL
+	, [LocationName] NVARCHAR(256) NOT NULL
+)
