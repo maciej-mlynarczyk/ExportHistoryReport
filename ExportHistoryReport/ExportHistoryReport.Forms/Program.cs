@@ -14,10 +14,18 @@ namespace ExportHistoryReport.Forms
         [STAThread]
         static void Main()
         {
-            UnityHelper.Container.RegisterSingleton<IExportRepository, ExportRepository>();
+            ConfigureUnity();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Report());
+        }
+
+        /// <summary>
+        /// Configures the unity.
+        /// </summary>
+        static void ConfigureUnity()
+        {
+            UnityHelper.Container.RegisterSingleton<IExportRepository, ExportRepository>();
         }
     }
 }
