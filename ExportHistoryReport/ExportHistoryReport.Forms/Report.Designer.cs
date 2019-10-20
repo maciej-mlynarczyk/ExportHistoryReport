@@ -76,7 +76,6 @@
             this.DateTillFilterEdit.Properties.NullValuePrompt = "Do:";
             this.DateTillFilterEdit.Properties.NullValuePromptShowForEmptyValue = true;
             this.DateTillFilterEdit.Properties.ShowNullValuePromptWhenFocused = true;
-            this.DateTillFilterEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.DateTillFilterEdit.Properties.DateTimeChanged += new System.EventHandler(this.DateTillFilterEdit_Properties_DateTimeChanged);
             this.DateTillFilterEdit.Size = new System.Drawing.Size(198, 20);
             this.DateTillFilterEdit.TabIndex = 2;
@@ -95,7 +94,6 @@
             this.DateSinceFilterEdit.Properties.NullValuePrompt = "Od:";
             this.DateSinceFilterEdit.Properties.NullValuePromptShowForEmptyValue = true;
             this.DateSinceFilterEdit.Properties.ShowNullValuePromptWhenFocused = true;
-            this.DateSinceFilterEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.DateSinceFilterEdit.Properties.DateTimeChanged += new System.EventHandler(this.DateSinceFilterEdit_Properties_DateTimeChanged);
             this.DateSinceFilterEdit.Size = new System.Drawing.Size(198, 20);
             this.DateSinceFilterEdit.TabIndex = 2;
@@ -120,8 +118,8 @@
             this.LocationFilterEdit.Properties.NullText = "Lokal:";
             this.LocationFilterEdit.Properties.NullValuePrompt = "Lokal:";
             this.LocationFilterEdit.Properties.NullValuePromptShowForEmptyValue = true;
+            this.LocationFilterEdit.Properties.ShowNullValuePromptWhenFocused = true;
             this.LocationFilterEdit.Properties.Sorted = true;
-            this.LocationFilterEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.LocationFilterEdit.Size = new System.Drawing.Size(199, 20);
             this.LocationFilterEdit.TabIndex = 1;
             // 

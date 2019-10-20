@@ -28,7 +28,7 @@ namespace ExportHistoryReport.Forms
         {
             try
             {
-                var locationName = LocationFilterEdit.SelectedItem.ToString();
+                var locationName = LocationFilterEdit.SelectedItem != null ? LocationFilterEdit.SelectedItem.ToString() : null;
                 var dateSince = DateSinceFilterEdit.DateTime > DateTime.MinValue ? (DateTime?)DateSinceFilterEdit.DateTime : null;
                 var dateTill = DateTillFilterEdit.DateTime > DateTime.MinValue ? (DateTime?)DateTillFilterEdit.DateTime : null;
                 ExportHistoryGrid.DataSource = _ExportRepository.LoadItems(locationName, dateSince, dateTill);
