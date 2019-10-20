@@ -29,12 +29,34 @@ namespace ExportHistoryReport.Forms
             try
             {
                 var locationName = LocationFilterEdit.SelectedItem.ToString();
-                ExportHistoryGrid.DataSource = _ExportRepository.LoadItems(locationName);
+                var dateSince = DateSinceFilterEdit.DateTime > DateTime.MinValue ? (DateTime?)DateSinceFilterEdit.DateTime : null;
+                var dateTill = DateTillFilterEdit.DateTime > DateTime.MinValue ? (DateTime?)DateTillFilterEdit.DateTime : null;
+                ExportHistoryGrid.DataSource = _ExportRepository.LoadItems(locationName, dateSince, dateTill);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(FilterAcceptButton, ex.Message, "Błąd podczas pobierania danych");
             }
+        }
+
+        /// <summary>
+        /// Handles the DateTimeChanged event of the DateSinceFilterEdit_Properties control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void DateSinceFilterEdit_Properties_DateTimeChanged(object sender, EventArgs e)
+        {
+            DateTillFilterEdit.Properties.MinValue = DateSinceFilterEdit.DateTime;
+        }
+
+        /// <summary>
+        /// Handles the DateTimeChanged event of the DateTillFilterEdit_Properties control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        private void DateTillFilterEdit_Properties_DateTimeChanged(object sender, EventArgs e)
+        {
+            DateSinceFilterEdit.Properties.MaxValue = DateTillFilterEdit.DateTime > DateTime.MinValue ? DateTillFilterEdit.DateTime : DateTime.MaxValue;
         }
     }
 }

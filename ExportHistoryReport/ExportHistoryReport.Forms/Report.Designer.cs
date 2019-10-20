@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.FilterPanel = new DevExpress.XtraEditors.SidePanel();
+            this.DateTillFilterEdit = new DevExpress.XtraEditors.DateEdit();
+            this.DateSinceFilterEdit = new DevExpress.XtraEditors.DateEdit();
             this.FilterAcceptButton = new DevExpress.XtraEditors.SimpleButton();
             this.LocationFilterEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ExportHistoryGrid = new DevExpress.XtraGrid.GridControl();
@@ -39,6 +41,10 @@
             this.UserColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.LocationColumn = new DevExpress.XtraGrid.Columns.GridColumn();
             this.FilterPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DateTillFilterEdit.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateTillFilterEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateSinceFilterEdit.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateSinceFilterEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocationFilterEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExportHistoryGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExportHistoryGridView)).BeginInit();
@@ -46,6 +52,8 @@
             // 
             // FilterPanel
             // 
+            this.FilterPanel.Controls.Add(this.DateTillFilterEdit);
+            this.FilterPanel.Controls.Add(this.DateSinceFilterEdit);
             this.FilterPanel.Controls.Add(this.FilterAcceptButton);
             this.FilterPanel.Controls.Add(this.LocationFilterEdit);
             this.FilterPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -53,6 +61,44 @@
             this.FilterPanel.Name = "FilterPanel";
             this.FilterPanel.Size = new System.Drawing.Size(227, 450);
             this.FilterPanel.TabIndex = 0;
+            // 
+            // DateTillFilterEdit
+            // 
+            this.DateTillFilterEdit.EditValue = null;
+            this.DateTillFilterEdit.Location = new System.Drawing.Point(13, 65);
+            this.DateTillFilterEdit.Name = "DateTillFilterEdit";
+            this.DateTillFilterEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.DateTillFilterEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateTillFilterEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateTillFilterEdit.Properties.NullText = "Do:";
+            this.DateTillFilterEdit.Properties.NullValuePrompt = "Do:";
+            this.DateTillFilterEdit.Properties.NullValuePromptShowForEmptyValue = true;
+            this.DateTillFilterEdit.Properties.ShowNullValuePromptWhenFocused = true;
+            this.DateTillFilterEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.DateTillFilterEdit.Properties.DateTimeChanged += new System.EventHandler(this.DateTillFilterEdit_Properties_DateTimeChanged);
+            this.DateTillFilterEdit.Size = new System.Drawing.Size(198, 20);
+            this.DateTillFilterEdit.TabIndex = 2;
+            // 
+            // DateSinceFilterEdit
+            // 
+            this.DateSinceFilterEdit.EditValue = null;
+            this.DateSinceFilterEdit.Location = new System.Drawing.Point(13, 39);
+            this.DateSinceFilterEdit.Name = "DateSinceFilterEdit";
+            this.DateSinceFilterEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.DateSinceFilterEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateSinceFilterEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.DateSinceFilterEdit.Properties.NullText = "Od:";
+            this.DateSinceFilterEdit.Properties.NullValuePrompt = "Od:";
+            this.DateSinceFilterEdit.Properties.NullValuePromptShowForEmptyValue = true;
+            this.DateSinceFilterEdit.Properties.ShowNullValuePromptWhenFocused = true;
+            this.DateSinceFilterEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.DateSinceFilterEdit.Properties.DateTimeChanged += new System.EventHandler(this.DateSinceFilterEdit_Properties_DateTimeChanged);
+            this.DateSinceFilterEdit.Size = new System.Drawing.Size(198, 20);
+            this.DateSinceFilterEdit.TabIndex = 2;
             // 
             // FilterAcceptButton
             // 
@@ -159,6 +205,10 @@
             this.Name = "Report";
             this.Text = "Raport";
             this.FilterPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DateTillFilterEdit.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateTillFilterEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateSinceFilterEdit.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DateSinceFilterEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LocationFilterEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExportHistoryGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExportHistoryGridView)).EndInit();
@@ -178,6 +228,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn UserColumn;
         private DevExpress.XtraGrid.Columns.GridColumn LocationColumn;
         private DevExpress.XtraEditors.SimpleButton FilterAcceptButton;
+        private DevExpress.XtraEditors.DateEdit DateSinceFilterEdit;
+        private DevExpress.XtraEditors.DateEdit DateTillFilterEdit;
     }
 }
 
