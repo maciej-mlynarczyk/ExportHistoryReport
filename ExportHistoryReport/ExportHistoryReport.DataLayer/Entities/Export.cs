@@ -12,7 +12,7 @@ namespace ExportHistoryReport.DataLayer.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class Export
+    internal partial class Export
     {
         public int ID { get; set; }
         public string Name { get; set; }

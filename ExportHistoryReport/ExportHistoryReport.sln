@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportHistoryReport.Forms",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportHistoryReport.DataLayer", "ExportHistoryReport.DataLayer\ExportHistoryReport.DataLayer.csproj", "{0819E843-028D-427B-BE2A-322887D914CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportHistoryReport.BusinessLayer", "ExportHistoryReport.BusinessLayer\ExportHistoryReport.BusinessLayer.csproj", "{FBF17B5B-E716-4DAA-A08B-8A89F75E328F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,10 +29,6 @@ Global
 		{0819E843-028D-427B-BE2A-322887D914CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0819E843-028D-427B-BE2A-322887D914CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0819E843-028D-427B-BE2A-322887D914CD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FBF17B5B-E716-4DAA-A08B-8A89F75E328F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FBF17B5B-E716-4DAA-A08B-8A89F75E328F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FBF17B5B-E716-4DAA-A08B-8A89F75E328F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FBF17B5B-E716-4DAA-A08B-8A89F75E328F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

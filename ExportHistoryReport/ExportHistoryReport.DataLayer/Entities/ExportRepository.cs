@@ -1,12 +1,10 @@
-﻿using ExportHistoryReport.BusinessLayer;
-using ExportHistoryReport.DataLayer.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ExportHistoryReport.DataLayer
+namespace ExportHistoryReport.DataLayer.Entities
 {
-    public class ExportRepository : IExportRepository
+    internal class ExportRepository : IExportRepository
     {
         /// <summary>
         /// Gets the locations.

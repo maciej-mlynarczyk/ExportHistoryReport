@@ -1,7 +1,7 @@
-﻿using ExportHistoryReport.BusinessLayer;
-using System;
+﻿using System;
 using System.Windows.Forms;
 using System.Linq;
+using ExportHistoryReport.DataLayer;
 
 namespace ExportHistoryReport.Forms
 {
@@ -14,7 +14,7 @@ namespace ExportHistoryReport.Forms
         /// </summary>
         public Report()
         {
-            _ExportRepository = UnityHelper.Resolve<IExportRepository>();
+            _ExportRepository = RepositoryHelper.Resolve<IExportRepository>();
             InitializeComponent();
             LocationFilterEdit.Properties.Items.AddRange(_ExportRepository.GetLocations().ToList());
         }

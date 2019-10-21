@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExportHistoryReport.BusinessLayer
+namespace ExportHistoryReport.DataLayer
 {
     public class ExportData
     {

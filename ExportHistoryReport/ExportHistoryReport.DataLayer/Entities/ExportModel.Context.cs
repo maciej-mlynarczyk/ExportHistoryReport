@@ -13,11 +13,12 @@ namespace ExportHistoryReport.DataLayer.Entities
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ExportHistoryReportEntities : DbContext
+    internal partial class ExportHistoryReportEntities : DbContext
     {
         public ExportHistoryReportEntities()
             : base("name=ExportHistoryReportEntities")
         {
+            Exports = Set<Export>();
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -25,6 +26,6 @@ namespace ExportHistoryReport.DataLayer.Entities
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Export> Exports { get; set; }
+        internal virtual DbSet<Export> Exports { get; set; }
     }
 }
